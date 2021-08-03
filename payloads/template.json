@@ -1,0 +1,156 @@
+{
+    "type": "flex",
+    "altText": "This is a Flex Message",
+    "contents": {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "label": "Line",
+            "uri": "https://linecorp.com/"
+          }
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Brown Cafe",
+              "weight": "bold",
+              "size": "xl",
+              "contents": []
+            },
+            {
+              "type": "box",
+              "layout": "baseline",
+              "margin": "md",
+              "contents": [
+                {
+                  "type": "icon",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                  "size": "sm"
+                },
+                {
+                  "type": "icon",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                  "size": "sm"
+                },
+                {
+                  "type": "icon",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                  "size": "sm"
+                },
+                {
+                  "type": "icon",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                  "size": "sm"
+                },
+                {
+                  "type": "icon",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png",
+                  "size": "sm"
+                },
+                {
+                  "type": "text",
+                  "text": "4.0",
+                  "size": "sm",
+                  "color": "#999999",
+                  "flex": 0,
+                  "margin": "md",
+                  "contents": []
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "margin": "lg",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "ฉีดวัคซีน 1 เข็ม :",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 4,
+                      "align": "start",
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "${vaccince.oneDose.total} (${vaccince.oneDose.percent}%)",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "align": "start",
+                      "wrap": true,
+                      "contents": []
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "ฉีดวัคซีน 2 เข็ม :",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 4,
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "${vaccince.twoDose.total} (${vaccince.twoDose.percent}%)",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "wrap": true,
+                      "contents": []
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "รวมทั้งหมด :",
+                      "size": "sm",
+                      "color": "#AAAAAA",
+                      "flex": 4,
+                      "contents": []
+                    },
+                    {
+                      "type": "text",
+                      "text": "${vaccince.all.total} (${vaccince.all.percent}%)",
+                      "size": "sm",
+                      "color": "#666666",
+                      "flex": 5,
+                      "wrap": true,
+                      "contents": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+}
+

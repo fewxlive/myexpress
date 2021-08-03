@@ -49,6 +49,14 @@ async function handleEvent(event) {
   //});
   //SWITCH FOR MANY CASES
   switch (event.message.text) {
+    case "flex":
+            let payload_template = require('./payloads/template.json');   
+            let str_payload_template = JSON.stringify(payload_template);
+            let vaccince = await getTodayCovid();
+            payload_template = JSON.parse(eval('`' + str_payload_template + '`'));     
+            //console.log(payload_template);    
+            return client.replyMessage(event.replyToken, payload_template);
+            break;
     case "covid":
       //let newText = "สวัสดี เราเป็นบอทรายงานสถิติโควิดนะ";
       let data = await getTodayCovid();
@@ -107,16 +115,16 @@ app.get("/test-firebase", async function (req, res) {
     "Test firebase successfully, check your firestore for a new record !!!"
   );
 });
-app.get("/vaccine/fetch", async (req, res) => {
+app.get("/vaccince/fetch", async (req, res) => {
   //FETCH
   let response = await fetch(
-    "https://covid19-cdn.workpointnews.com/api/vaccine.json"
+    "https://covid19-cdn.workpointnews.com/api/vaccince.json"
   );
   let data = await response.json();
   console.log(data);
   //SAVE TO FIRESTORE
   let current_date = new Date().toISOString().split("T")[0];
-  await db.collection("vaccines").doc(current_date).set(data);
+  await db.collection("vaccinces").doc(current_date).set(data);
   n;
   //SEND TO BROWSER AS HTML OR TEXT
   let text = JSON.stringify(data);
