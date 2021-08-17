@@ -115,10 +115,10 @@ app.get("/test-firebase", async function (req, res) {
     "Test firebase successfully, check your firestore for a new record !!!"
   );
 });
-app.get("/vaccince/fetch", async (req, res) => {
+app.get("/vaccine/fetch", async (req, res) => {
   //FETCH
   let response = await fetch(
-    "https://covid19-cdn.workpointnews.com/api/vaccince.json"
+    "https://covid19-cdn.workpointnews.com/api/vacince.json"
   );
   let data = await response.json();
   console.log(data);
