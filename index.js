@@ -118,13 +118,13 @@ app.get("/test-firebase", async function (req, res) {
 app.get("/vaccine/fetch", async (req, res) => {
   //FETCH
   let response = await fetch(
-    "https://covid19-cdn.workpointnews.com/api/vacince.json"
+    "https://covid19-cdn.workpointnews.com/api/vaccine.json"
   );
   let data = await response.json();
   console.log(data);
   //SAVE TO FIRESTORE
   let current_date = new Date().toISOString().split("T")[0];
-  await db.collection("vaccinces").doc(current_date).set(data);
+  await db.collection("vaccines").doc(current_date).set(data);
   n;
   //SEND TO BROWSER AS HTML OR TEXT
   let text = JSON.stringify(data);
